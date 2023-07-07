@@ -43,6 +43,7 @@ public class TelemetryController : Controller
             moonlight.Servers = telemetry.Servers;
             moonlight.Users = telemetry.Users;
             moonlight.Webspaces = telemetry.Webspaces;
+            moonlight.LastHeartbeat = DateTime.UtcNow;
             
             MoonlightRepository.Update(moonlight);
         }
