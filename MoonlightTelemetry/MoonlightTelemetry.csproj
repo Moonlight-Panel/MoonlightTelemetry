@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Logging.Net" Version="1.1.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.8">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -25,10 +26,7 @@
 
     <ItemGroup>
       <Folder Include="App\Database\Migrations\" />
-      <Folder Include="App\Http\Controllers\" />
       <Folder Include="App\Http\Middleware\" />
-      <Folder Include="App\Http\Requests\" />
-      <Folder Include="App\Http\Resources\" />
     </ItemGroup>
 
 </Project>

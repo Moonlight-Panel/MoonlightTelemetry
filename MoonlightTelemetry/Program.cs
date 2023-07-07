@@ -2,6 +2,8 @@ using MoonlightTelemetry.App.Database;
 using MoonlightTelemetry.App.Repositories;
 using MoonlightTelemetry.App.Services;
 
+_ = new ConfigService(new()); // Create default config if not existing
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<DataContext>();
