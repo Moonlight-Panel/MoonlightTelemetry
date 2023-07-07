@@ -17,4 +17,7 @@ RUN dotnet publish "MoonlightTelemetry.csproj" -c Release -o /app/publish /p:Use
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+RUN mkdir -p /app/storage
+RUN touch /app/storage/donttriggeranyerrors
+RUN rm -r /app/storage/*
 ENTRYPOINT ["dotnet", "MoonlightTelemetry.dll"]
